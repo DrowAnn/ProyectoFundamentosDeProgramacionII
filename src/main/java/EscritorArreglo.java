@@ -20,11 +20,15 @@ public class EscritorArreglo {
     public String[] escribirArreglo() {
         Scanner scanner = new Scanner(System.in);
         String[] arreglo = new String[longitud];
+        String texto;
 
         for (int i = 0; i < longitud; i++) {
-            System.out.println("Digite el nombre de la persona en el puesto " + i + ":");
+            texto = "Digite el nombre de la persona en el puesto " + (i + 1) + ":";
+            System.out.println(texto);
             arreglo[i] = scanner.next();
         }
+
+        scanner.close();
         return arreglo;
     }
 
