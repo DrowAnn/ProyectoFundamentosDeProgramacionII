@@ -4,14 +4,27 @@
 - Se utiliza el algoritmo de ordenamiento por inserción para ordenar los nombres en orden alfabético.
 - Se desarrolla una función que imprime los nombres por pantalla, una vez ordenados.*/
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        String arreglo[] = { "casa", "perro", "robert", "elton" };
-        OrdenamientoInsercion arregloOrdenado = new OrdenamientoInsercion(arreglo);
-        arregloOrdenado.Ordenador();
+        String[] arreglo;
+        Scanner scanner = new Scanner(System.in);
 
+        System.out.println("Digite la cantidad de personas en la fila:");
+        Integer longitud = scanner.nextInt();
+
+        EscritorArreglo escritor = new EscritorArreglo(longitud);
+        arreglo = escritor.escribirArreglo();
+
+        OrdenamientoInsercion arregloOrdenado = new OrdenamientoInsercion(arreglo);
+        arreglo = arregloOrdenado.Ordenador();
+
+        ImprimirArreglos impresion = new ImprimirArreglos(arreglo);
+        impresion.impresionArreglo();
+        
     }
 
 }

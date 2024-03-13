@@ -7,7 +7,7 @@ public class ImprimirArreglos {
 
     // Declaración del metodo Constructor
     public ImprimirArreglos(String[] arreglo) {
-        setImpresion(arreglo);
+        setArreglo(arreglo);
     }
 
     // Declaración del Metodo
@@ -18,11 +18,11 @@ public class ImprimirArreglos {
     }
 
     // Declaración de Getter y Setter
-    public String[] getImpresion() {
+    public String[] getArreglo() {
         return arreglo;
     }
 
-    public void setImpresion(String[] arreglo) {
+    public void setArreglo(String[] arreglo) {
         this.arreglo = arreglo;
     }
 }
