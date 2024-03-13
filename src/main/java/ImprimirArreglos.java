@@ -13,8 +13,6 @@ public class ImprimirArreglos {
     // Declaración del Metodo
     public void impresionArreglo() {
         System.out.println();
-        System.out.println("Arreglo Ordenado:");
-        System.out.println();
         for (int i = 0; i < arreglo.length; i++) {
             System.out.println((i + 1) + ". " + arreglo[i]);
         }
